@@ -22,6 +22,14 @@ echo "Si el sistema es nuevo veras mensajes de que no puede borrar"
 echo "You will see cannot remove if the system is new"
 echo
 cd
+mkdir ../bios/Acorn
+mkdir ../bios/BBCMicro
+mkdir ../bios/bk
+mkdir ../bios/ep128emu
+mkdir ../bios/ep128emu/roms
+mkdir ../bios/saves
+mkdir ../bios/saves/dolphin-emu
+mkfir ../bios/saves/dolphin-emu/Triforce
 mkdir ../bios/neocd
 mkdir ../bios/keropi
 mkdir ../bios/dc
@@ -31,7 +39,7 @@ mkdir ../bios/quasi88
 mkdir ../bios/np2kai
 mkdir ../bios/xmil
 mkdir ../bios/fmtowns
-mkdir ../bios/wsh57
+#mkdir ../bios/wsh57
 mkdir ../bios/zc210
 mkdir ../bios/mame
 mkdir ../bios/mame/samples
@@ -45,6 +53,7 @@ mkdir ../bios/GC/JAP
 mkdir ../bios/GC/USA
 mkdir ../bios/Oric
 mkdir ../bios/psvita
+mkdir ../bios/xroar
 cd
 echo
 rm ../bios/ATARIOSA.ROM
@@ -219,9 +228,35 @@ rm ../bios/fmtmarty.zip
 rm ../bios/fmtowns.zip
 rm ../bios/fmtownsux.zip
 rm ../bios/gp32.zip
+rm ../bios/gp32166m.bin
 rm ../bios/laser310.zip
-rm ../bios/wsh57/scripten.exe
+#rm ../bios/wsh57/scripten.exe
+rm ../bios/segaai.zip
+rm ../bios/beena.zip
 rm ../bios/upd7801g.s01
+rm ../bios/xroar/bas10.rom
+rm ../bios/xroar/bas12.rom
+rm ../bios/xroar/bas13.rom
+rm ../bios/xroar/extbas11.rom
+rm ../bios/xroar/coco3.rom
+rm ../bios/xroar/coco3p.rom
+rm ../bios/xroar/disk11.rom
+rm ../bios/xroar/d32.rom
+rm ../bios/xroar/d64_1.rom
+rm ../bios/xroar/d64_2.rom
+rm ../bios/xroar/ddos10.rom
+rm ../bios/xroar/mc10.rom
+rm ../bios/xroar/alice.rom
+rm ../bios/cgenie.zip
+rm ../bios/dragon64.zip
+rm ../bios/dragon32.zip
+rm ../bios/mc10.zip
+rm ../bios/alice.zip
+rm ../bios/trs80.zip
+rm ../bios/trs80m3.zip
+rm ../bios/trs80m4.zip
+rm ../bios/trs80m4p.zip
+rm ../bios/colecovision.rom
 rm ../bios/ROM1
 rm ../bios/zc210/zcdata.dat
 rm ../bios/zc210/sf2/default.sf2
@@ -346,12 +381,14 @@ rm ../bios/openmsx/fs-a1gt_firmware.rom
 rm ../bios/openmsx/fs-a1gt_kanjifont.rom
 rm ../bios/openmsx/ide250.zip
 rm ../bios/supracan.zip
+rm ../bios/umc6650.zip
 rm ../bios/vis.zip
 rm ../bios/pc6001.zip
 rm ../bios/pc6001a.zip
 rm ../bios/pc6001mk2.zip
 rm ../bios/pc6001mk2sr.zip
 rm ../bios/casloopy.zip
+rm ../bios/pv2000.zip
 rm ../bios/GC/EUR/IPL.bin
 rm ../bios/GC/JAP/IPL.bin
 rm ../bios/GC/USA/IPL.bin
@@ -363,6 +400,51 @@ rm ../bios/Oric/colour.rom
 rm ../bios/psvita/PSP2UPDAT.PUP
 rm ../bios/psvita/PSVUPDAT.PUP
 rm ../bios/mame/casloopy.zip
+rm ../bios/Acorn/basic2.rom
+rm ../bios/BBCMicro/os12.rom
+rm ../bios/BBCMicro/dfs-2.26.rom
+rm ../bios/pcw8256.zip
+rm ../bios/pcw9512.zip
+rm ../bios/mz80k.zip
+rm ../bios/mz80kj.zip
+rm ../bios/mz700.zip
+rm ../bios/mz800.zip
+rm ../bios/mz2000.zip
+rm ../bios/mz2500.zip
+rm ../bios/rx78.zip
+rm ../bios/pc8001.zip
+rm ../bios/pc8001mk2sr.zip
+rm ../bios/jvs13551.zip
+rm ../bios/ep128emu/roms/exos21.rom
+rm ../bios/ep128emu/roms/basic21.rom
+rm ../bios/ep128emu/roms/exdos13.rom
+rm ../bios/ep128emu/roms/epfileio.rom
+rm ../bios/ep128emu/roms/exos20.rom
+rm ../bios/ep128emu/roms/basic20.rom
+rm ../bios/ep128emu/roms/exos24uk.rom
+rm ../bios/ep128emu/roms/hun.rom
+rm ../bios/ep128emu/roms/epd19hft.rom
+rm ../bios/ep128emu/roms/zt19hfnt.rom
+rm ../bios/ep128emu/roms/brd.rom
+rm ../bios/ep128emu/roms/zt19uk.rom
+rm ../bios/ep128emu/roms/tvc22_sys.rom
+rm ../bios/ep128emu/roms/tvc22_ext.rom
+rm ../bios/ep128emu/roms/tvcfileio.rom
+rm ../bios/ep128emu/roms/tvc_dos12d.rom
+rm ../bios/tvc64.zip
+rm ../bios/ep64.zip
+rm ../bios/ep128.zip
+rm ../bios/ep64_exdos.zip
+rm ../bios/saves/dolphin-emu/Triforce/segaboot.gcm
+rm ../bios/bk/B11M_BOS.ROM
+rm ../bios/bk/B11M_EXT.ROM
+rm ../bios/bk/BAS11M_0.ROM
+rm ../bios/bk/BAS11M_1.ROM
+rm ../bios/bk/DISK_327.ROM
+rm ../bios/bk/BASIC10.ROM
+rm ../bios/bk/FOCAL10.ROM
+rm ../bios/bk/MONIT10.ROM
+rm ../bios/bk0010.zip
 echo
 echo "Sistema listo para su correcta instalacion"
 echo "System ready for right installation"
