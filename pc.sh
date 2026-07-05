@@ -1,6 +1,6 @@
 #!/bin/bash
 ###########################################################################
-# Repositorio: BatoceraV43Bios 2026
+# Repositorio: Batocera 44 Bios 2026
 # Por: Luciano's tech ("https://sites.google.com/view/lucianostech/)
 # License: http://creativecommons.org/licenses/by-sa/4.0/
 ###########################################################################
@@ -14,7 +14,7 @@ echo
 echo "Limpiando las bios basura que te descargaste de otro lado o las mismas si se te corto internet"
 echo "Cleaning the garbage bios downloaded from other sites or from this site but if you internet shutdown in the process"
 echo
-RUTA=https://raw.githubusercontent.com/PIBSAS/BatoceraV43Bios/main/bios/
+RUTA=https://raw.githubusercontent.com/PIBSAS/batocera44/main/bios/
 RUTA_ARCH="https://archive.org/download/bios_batocera/BatoceraV39Bios/bios/"
 RUTA_B="https://archive.org/download/bios_batocera/"
 echo
@@ -447,13 +447,6 @@ echo
 wget -c "${RUTA}o2rom.bin" -P ../bios/
 wget -c "${RUTA}c52.bin" -P ../bios/
 echo
-echo "###### Oric Atmos ######"
-# https://github.com/TomHarte/CLK
-echo
-wget -c "${RUTA}Oric/basic11.rom" -P ../bios/Oric/
-wget -c "${RUTA}Oric/colour.rom" -P ../bios/Oric/
-echo
-echo
 echo "###### Videopac+ G7400 ######"
 echo
 wget -c "${RUTA}g7400.bin" -P ../bios/
@@ -608,10 +601,6 @@ wget -c "${RUTA}sgb2_boot.bin" -P ../bios/
 wget -c "${RUTA}SGB1.sfc" -P ../bios/
 wget -c "${RUTA}SGB2.sfc" -P ../bios/
 echo
-echo "###### NINTENDO 64DD ######"
-echo
-wget -c "${RUTA}64DD_IPL.bin" -P ../bios/
-echo
 echo "###### Microsoft MSX ######"
 # https://docs.libretro.com/library/fmsx/#bios
 echo
@@ -745,14 +734,15 @@ echo
 echo "###### GAMEPARK GP32 ######"
 echo
 wget -c "${RUTA}gp32.zip" -P ../bios/
+wget -c "${RUTA}gp32166m.bin" -P ../bios/
 echo
 echo "###### VTECH LASER 310 ######"
 echo
 wget -c "${RUTA}laser310.zip" -P ../bios/
 echo
-echo "###### FUTURE PINBALL ######"
+#echo "###### FUTURE PINBALL ######"
 echo
-wget -c "${RUTA}wsh57/scripten.exe" -P ../bios/wsh57/
+#wget -c "${RUTA}wsh57/scripten.exe" -P ../bios/wsh57/
 echo
 echo "###### SUPER CASEETTE VISION ######"
 echo
@@ -805,6 +795,14 @@ wget -c "${RUTA}mac608.chd" -P ../bios/
 wget -c "${RUTA}mac701.chd" -P ../bios/
 wget -c "${RUTA}mac755.chd" -P ../bios/
 echo
+echo "###### Sega AI Computer ######"
+echo
+wget -c "${RUTA}segaai.zip" -P ../bios/
+echo
+echo "###### Sega Advanced Pico Beena ######"
+echo
+wget -c "${RUTA}beena.zip" -P ../bios/
+echo
 echo "###### TANDY COLOR COMPUTER ######"
 echo
 wget -c "${RUTA}coco.zip" -P ../bios/
@@ -813,6 +811,40 @@ wget -c "${RUTA}coco2b.zip" -P ../bios/
 wget -c "${RUTA}coco3.zip" -P ../bios/
 wget -c "${RUTA}coco3p.zip" -P ../bios/
 wget -c "${RUTA}coco_fdc_v11.zip" -P ../bios/
+wget -c "${RUTA}bas10.rom" -P ../bios/xroar/
+wget -c "${RUTA}bas12.rom" -P ../bios/xroar/
+wget -c "${RUTA}bas13.rom" -P ../bios/xroar/
+wget -c "${RUTA}extbas11.rom" -P ../bios/xroar/
+wget -c "${RUTA}coco3.rom" -P ../bios/xroar/
+wget -c "${RUTA}coco3p.rom" -P ../bios/xroar/
+wget -c "${RUTA}disk11.rom" -P ../bios/xroar/
+echo
+echo "###### Colour Genie ######"
+echo
+wget -c "${RUTA}cgenie.zip" -P ../bios/
+echo
+echo "###### Dragon 64 ######"
+echo
+wget -c "${RUTA}dragon64.zip" -P ../bios/
+wget -c "${RUTA}dragon32.zip" -P ../bios/
+wget -c "${RUTA}d32.rom" -P ../bios/xroar/
+wget -c "${RUTA}d64_1.rom" -P ../bios/xroar/
+wget -c "${RUTA}d64_2.rom" -P ../bios/xroar/
+wget -c "${RUTA}ddos10.rom" -P ../bios/xroar/
+echo
+echo "###### Tandy MC-10 ######"
+echo
+wget -c "${RUTA}mc10.zip" -P ../bios/
+wget -c "${RUTA}alice.zip" -P ../bios/
+wget -c "${RUTA}mc10.rom" -P ../bios/xroar/
+wget -c "${RUTA}alice.rom" -P ../bios/xroar/
+echo
+echo "###### TRS-80 ######"
+echo
+wget -c "${RUTA}trs80.zip" -P ../bios/
+wget -c "${RUTA}trs80m3.zip" -P ../bios/
+wget -c "${RUTA}trs80m4.zip" -P ../bios/
+wget -c "${RUTA}trs80m4p.zip" -P ../bios/
 echo
 echo "###### TOMY TUTOR ######"
 echo
@@ -839,6 +871,10 @@ wget -c "${RUTA}adam_fdc.zip" -P ../bios/
 wget -c "${RUTA}adam_kb.zip" -P ../bios/
 wget -c "${RUTA}adam_prn.zip" -P ../bios/
 echo
+echo "###### COLECOVISION ######"
+echo
+wget -c "${RUTA}colecovision.rom" -P ../bios/
+echo
 echo "###### BBC MICRO ######"
 echo
 wget -c "${RUTA}bbcb.zip" -P ../bios/
@@ -850,6 +886,14 @@ wget -c "${RUTA}bbcmc.zip" -P ../bios/
 wget -c "${RUTA}bbc_bitstik1.zip" -P ../bios/
 wget -c "${RUTA}bbc_bitstik2.zip" -P ../bios/
 wget -c "${RUTA}mame/samples/bbc.zip" -P ../bios/mame/samples/
+wget -c "${RUTA}Acorn/basic2.rom" -P ../bios/Acorn/
+wget -c "${RUTA}BBCMicro/os12.rom" -P ../bios/BBCMicro/
+wget -c "${RUTA}BBCMicro/dfs-2.26.rom" -P ../bios/BBCMicro/
+echo
+echo "###### AMSTRAD PCW ######"
+echo
+wget -c "${RUTA}pcw8256.zip" -P ../bios/
+wget -c "${RUTA}pcw9512.zip" -P ../bios/
 echo
 echo "###### APF M-1000 ######"
 echo
@@ -897,6 +941,27 @@ wget -c "${RUTA}lynx48k.zip" -P ../bios/
 wget -c "${RUTA}lynx96k.zip" -P ../bios/
 wget -c "${RUTA}lynx128k.zip" -P ../bios/
 echo
+echo "###### Sharp MZ-80K ######"
+echo
+wget -c "${RUTA}mz80k.zip" -P ../bios/
+wget -c "${RUTA}mz80kj.zip" -P ../bios/
+echo
+echo "###### Sharp MZ-700 ######"
+echo
+wget -c "${RUTA}mz700.zip" -P ../bios/
+echo
+echo "###### Sharp MZ-800 ######"
+echo
+wget -c "${RUTA}mz800.zip" -P ../bios/
+echo
+echo "###### Sharp MZ-2000 ######"
+echo
+wget -c "${RUTA}mz2000.zip" -P ../bios/
+echo
+echo "###### Sharp MZ-2500 ######"
+echo
+wget -c "${RUTA}/mz2500.zip" -P ../bios/
+echo
 echo "###### VIDEO GAME MUSIC PLAYER ######"
 echo
 wget -c "${RUTA}qsound.zip" -P ../bios/
@@ -927,6 +992,10 @@ echo "###### VTECH SOCRATES ######"
 echo
 wget -c "${RUTA}socrates.zip" -P ../bios/
 echo
+echo "###### Bandai RX-78 ######"
+echo
+wget -c "${RUTA}rx78.zip" -P ../bios/
+echo
 echo "###### ENTEX ADVENTURE VISION ######"
 echo
 wget -c "${RUTA}advision.zip" -P ../bios/
@@ -934,6 +1003,15 @@ echo
 echo "###### BITCORP GAMATE ######"
 echo
 wget -c "${RUTA}gamate.zip" -P ../bios/
+echo
+echo "###### Casio PV-2000 ######"
+echo
+wget -c "${RUTA}pv2000.zip" -P ../bios/
+echo
+echo "###### NEC PC-8001 ######"
+echo
+wget -c "${RUTA}pc8001.zip" -P ../bios/
+wget -c "${RUTA}pc8001mk2sr.zip" -P ../bios/
 echo
 echo "###### PHILLIPS CD-I ######"
 echo
@@ -947,6 +1025,7 @@ echo "###### HIKARU ######"
 echo
 wget -c "${RUTA}hikaru.zip" -P ../bios/
 wget -c "${RUTA}mie.zip" -P ../bios/
+wget -c "${RUTA}jvs13551.zip" -P ../bios/
 echo
 echo "###### PLAYSTATION VITA ######"
 # https://www.playstation.com/en-us/support/hardware/psvita/system-software/
@@ -1005,10 +1084,15 @@ echo
 echo "###### SUPER A CAN ######"
 echo
 wget -c "${RUTA}supracan.zip" -P ../bios/
+wget -c "${RUTA}umc6650.zip" -P ../bios/
 echo
 echo "###### TANDY Video Information System MD-2500 ######"
 echo
 wget -c "${RUTA}vis.zip" -P ../bios/
+echo
+echo "###### NINTENDO 64DD ######"
+echo
+wget -c "${RUTA}64DD_IPL.bin" -P ../bios/
 echo
 echo "###### NINTENDO GAMECUBE ######"
 echo
@@ -1028,6 +1112,55 @@ echo
 #wget -c "${RUTA}mcpx_1.0.bin" -P ../bios/
 echo "mcpx_1.0.bin already downloaded"
 wget -c "${RUTA}cerbios.bin" -P ../bios/
+echo
+echo "###### Oric Atmos ######"
+# https://github.com/TomHarte/CLK
+echo
+wget -c "${RUTA}Oric/basic11.rom" -P ../bios/Oric/
+wget -c "${RUTA}Oric/colour.rom" -P ../bios/Oric/
+echo
+echo "###### Enterprise ######"
+echo
+wget -c "${RUTA}ep128emu/roms/exos21.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/basic21.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/exdos13.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/epfileio.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/exos20.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/basic20.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/exos24uk.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/hun.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/epd19hft.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/zt19hfnt.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/brd.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/zt19uk.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep64.zip" -P ../bios/
+wget -c "${RUTA}ep128.zip" -P ../bios/
+wget -c "${RUTA}ep64_exdos.zip" -P ../bios/
+echo
+echo "###### Videoton TVC ######"
+echo
+wget -c "${RUTA}ep128emu/roms/tvc22_sys.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/tvc22_ext.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/tvcfileio.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/tvc_dos12d.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}tvc64.zip" -P ../bios/
+echo
+echo "###### Triforce ######"
+echo
+wget -c "${RUTA}saves/dolphin-emu/Triforce/segaboot.gcm" -P ../saves/dolphin-emu/Triforce/
+echo
+echo "###### Elektronika BK ######"
+# https://docs.libretro.com/library/bk/
+echo
+wget -c "${RUTA}bk/B11M_BOS.ROM" -P ../bios/bk/
+wget -c "${RUTA}bk/B11M_EXT.ROM" -P ../bios/bk/
+wget -c "${RUTA}bk/BAS11M_0.ROM" -P ../bios/bk/
+wget -c "${RUTA}bk/BAS11M_1.ROM" -P ../bios/bk/
+wget -c "${RUTA}bk/DISK_327.ROM" -P ../bios/bk/
+wget -c "${RUTA}bk/BASIC10.ROM" -P ../bios/bk/
+wget -c "${RUTA}bk/FOCAL10.ROM" -P ../bios/bk/
+wget -c "${RUTA}bk/MONIT10.ROM" -P ../bios/bk/
+wget -c "${RUTA}bk0010.zip" -P ../bios/
 echo
 sleep 1
 echo "Al fin, Copiadas todas las BIOS--Cool we finish"
