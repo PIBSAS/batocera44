@@ -1,15 +1,15 @@
-<h1 align="center"> Batocera V43 Bios 2026</h1>
+<h1 align="center"> Batocera 44 Bios 2026</h1>
 <p align="center">
-Las Bios Correctas y necesarias para Batocera V43, sin archivos innecesarios.
+Las Bios Correctas y necesarias para Batocera, sin archivos innecesarios.
 </p>
 <p align="center">
-The right Bios for Batocera V43 without unnecessary files.
+The right Bios for Batocera without unnecessary files.
 </p>
 <p align="center">
 <img src="https://raw.githubusercontent.com/PIBSAS/RetroPieBios/master/logov3.png" alt="Luciano's tech" width="400" height="500">
 </p>
 
-<h2 align="center"> Raspberry Pi Bios Batocera V43</h2>
+<h2 align="center"> Raspberry Pi:</h2>
 
 ## Easy Install -- Instalación fácil para Raspberry Pi:
 
@@ -18,7 +18,7 @@ The right Bios for Batocera V43 without unnecessary files.
 Type:
 
 ```
-curl -sSL https://raw.githubusercontent.com/PIBSAS/BatoceraV43Bios/main/pi.sh | bash
+curl -sSL https://raw.githubusercontent.com/PIBSAS/batocera44/main/pi.sh | bash
 ```
 
 ### Or Login through SSH -- O Nos conectamos por SSH:
@@ -32,10 +32,10 @@ Password: `linux`
 Type:
 
 ```
-curl -sSL https://raw.githubusercontent.com/PIBSAS/BatoceraV43Bios/main/pi.sh | bash
+curl -sSL https://raw.githubusercontent.com/PIBSAS/batocera44/main/pi.sh | bash
 ```
 
-<h2 align="center"> PC Bios Batocera V43</h2>
+<h2 align="center"> PC: </h2>
 
 ## Easy Install -- Instalación fácil PC:
 
@@ -50,7 +50,7 @@ Password: `linux`
 Type:
 
 ```
-curl -sSL https://raw.githubusercontent.com/PIBSAS/BatoceraV43Bios/main/pc.sh | bash
+curl -sSL https://raw.githubusercontent.com/PIBSAS/batocera44/main/pc.sh | bash
 ```
 ### Enjoy!!! --- A disfrutar!!!
 
