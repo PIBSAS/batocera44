@@ -1,6 +1,6 @@
 #!/bin/bash
 ###########################################################################
-# Repositorio: BatoceraV43Bios 2026
+# Repositorio: Batocera 44 Bios 2026
 # Por: Luciano's tech ("https://sites.google.com/view/lucianostech/)
 # License: http://creativecommons.org/licenses/by-sa/4.0/
 ###########################################################################
@@ -14,7 +14,7 @@ echo
 echo "Limpiando las bios basura que te descargaste de otro lado o las mismas si se te corto internet"
 echo "Cleaning the garbage bios downloaded from other sites or from this site but if you internet shutdown in the process"
 echo
-RUTA=https://raw.githubusercontent.com/PIBSAS/BatoceraV43Bios/main/bios/
+RUTA=https://raw.githubusercontent.com/PIBSAS/batocera44/main/bios/
 RUTA_ARCH="https://archive.org/download/bios_batocera/BatoceraV39Bios/bios/"
 RUTA_B="https://archive.org/download/bios_batocera/"
 echo
@@ -22,6 +22,14 @@ echo "Si el sistema es nuevo veras mensajes de que no puede borrar"
 echo "You will see cannot remove if the system is new"
 echo
 cd
+mkdir ../bios/Acorn
+mkdir ../bios/BBCMicro
+mkdir ../bios/bk
+mkdir ../bios/ep128emu
+mkdir ../bios/ep128emu/roms
+mkdir ../bios/saves
+mkdir ../bios/saves/dolphin-emu
+mkfir ../bios/saves/dolphin-emu/Triforce
 mkdir ../bios/neocd
 mkdir ../bios/keropi
 mkdir ../bios/dc
@@ -44,6 +52,8 @@ mkdir ../bios/GC/EUR
 mkdir ../bios/GC/JAP
 mkdir ../bios/GC/USA
 mkdir ../bios/Oric
+mkdir ../bios/psvita
+mkdir ../bios/xroar
 cd
 echo
 rm ../bios/ATARIOSA.ROM
@@ -114,8 +124,8 @@ rm ../bios/panafz1.bin
 rm ../bios/panafz10.bin
 rm ../bios/goldstar.bin
 rm ../bios/dc_boot.bin
-rm ../bios/dc/dc_boot.bin
 rm ../bios/dc_flash.bin
+rm ../bios/dc/dc_boot.bin
 rm ../bios/dc/naomi.zip
 rm ../bios/dc/awbios.zip
 rm ../bios/bios_CD_E.bin
@@ -218,9 +228,35 @@ rm ../bios/fmtmarty.zip
 rm ../bios/fmtowns.zip
 rm ../bios/fmtownsux.zip
 rm ../bios/gp32.zip
+rm ../bios/gp32166m.bin
 rm ../bios/laser310.zip
 #rm ../bios/wsh57/scripten.exe
+rm ../bios/segaai.zip
+rm ../bios/beena.zip
 rm ../bios/upd7801g.s01
+rm ../bios/xroar/bas10.rom
+rm ../bios/xroar/bas12.rom
+rm ../bios/xroar/bas13.rom
+rm ../bios/xroar/extbas11.rom
+rm ../bios/xroar/coco3.rom
+rm ../bios/xroar/coco3p.rom
+rm ../bios/xroar/disk11.rom
+rm ../bios/xroar/d32.rom
+rm ../bios/xroar/d64_1.rom
+rm ../bios/xroar/d64_2.rom
+rm ../bios/xroar/ddos10.rom
+rm ../bios/xroar/mc10.rom
+rm ../bios/xroar/alice.rom
+rm ../bios/cgenie.zip
+rm ../bios/dragon64.zip
+rm ../bios/dragon32.zip
+rm ../bios/mc10.zip
+rm ../bios/alice.zip
+rm ../bios/trs80.zip
+rm ../bios/trs80m3.zip
+rm ../bios/trs80m4.zip
+rm ../bios/trs80m4p.zip
+rm ../bios/colecovision.rom
 rm ../bios/ROM1
 rm ../bios/zc210/zcdata.dat
 rm ../bios/zc210/sf2/default.sf2
@@ -321,13 +357,7 @@ rm ../bios/cdimono1.zip
 rm ../bios/dc/naomi2.zip
 rm ../bios/hikaru.zip
 rm ../bios/mie.zip
-#rm ../bios/psvita/PSP2UPDAT.PUP
-#rm ../bios/psvita/PSVUPDAT.PUP
 rm ../bios/vectrex.zip
-rm ../bios/pc6001.zip
-rm ../bios/pc6001a.zip
-rm ../bios/pc6001mk2.zip
-rm ../bios/pc6001mk2sr.zip
 rm ../bios/scummvm/extra/MT32_PCM.ROM
 rm ../bios/scummvm/extra/MT32_CONTROL.ROM
 rm ../bios/openmsx/nms8250_disk.rom
@@ -349,8 +379,14 @@ rm ../bios/openmsx/fs-a1gt_firmware.rom
 rm ../bios/openmsx/fs-a1gt_kanjifont.rom
 rm ../bios/openmsx/ide250.zip
 rm ../bios/supracan.zip
+rm ../bios/umc6650.zip
 rm ../bios/vis.zip
+rm ../bios/pc6001.zip
+rm ../bios/pc6001a.zip
+rm ../bios/pc6001mk2.zip
+rm ../bios/pc6001mk2sr.zip
 rm ../bios/casloopy.zip
+rm ../bios/pv2000.zip
 rm ../bios/GC/EUR/IPL.bin
 rm ../bios/GC/JAP/IPL.bin
 rm ../bios/GC/USA/IPL.bin
@@ -359,13 +395,59 @@ rm ../bios/GC/USA/IPL.bin
 #rm ../bios/cerbios.bin
 rm ../bios/Oric/basic11.rom
 rm ../bios/Oric/colour.rom
+#rm ../bios/psvita/PSP2UPDAT.PUP
+#rm ../bios/psvita/PSVUPDAT.PUP
 rm ../bios/mame/casloopy.zip
+rm ../bios/Acorn/basic2.rom
+rm ../bios/BBCMicro/os12.rom
+rm ../bios/BBCMicro/dfs-2.26.rom
+rm ../bios/pcw8256.zip
+rm ../bios/pcw9512.zip
+rm ../bios/mz80k.zip
+rm ../bios/mz80kj.zip
+rm ../bios/mz700.zip
+rm ../bios/mz800.zip
+rm ../bios/mz2000.zip
+rm ../bios/mz2500.zip
+rm ../bios/rx78.zip
+rm ../bios/pc8001.zip
+rm ../bios/pc8001mk2sr.zip
+rm ../bios/jvs13551.zip
+rm ../bios/ep128emu/roms/exos21.rom
+rm ../bios/ep128emu/roms/basic21.rom
+rm ../bios/ep128emu/roms/exdos13.rom
+rm ../bios/ep128emu/roms/epfileio.rom
+rm ../bios/ep128emu/roms/exos20.rom
+rm ../bios/ep128emu/roms/basic20.rom
+rm ../bios/ep128emu/roms/exos24uk.rom
+rm ../bios/ep128emu/roms/hun.rom
+rm ../bios/ep128emu/roms/epd19hft.rom
+rm ../bios/ep128emu/roms/zt19hfnt.rom
+rm ../bios/ep128emu/roms/brd.rom
+rm ../bios/ep128emu/roms/zt19uk.rom
+rm ../bios/ep128emu/roms/tvc22_sys.rom
+rm ../bios/ep128emu/roms/tvc22_ext.rom
+rm ../bios/ep128emu/roms/tvcfileio.rom
+rm ../bios/ep128emu/roms/tvc_dos12d.rom
+rm ../bios/tvc64.zip
+rm ../bios/ep64.zip
+rm ../bios/ep128.zip
+rm ../bios/ep64_exdos.zip
+rm ../bios/saves/dolphin-emu/Triforce/segaboot.gcm
+rm ../bios/bk/B11M_BOS.ROM
+rm ../bios/bk/B11M_EXT.ROM
+rm ../bios/bk/BAS11M_0.ROM
+rm ../bios/bk/BAS11M_1.ROM
+rm ../bios/bk/DISK_327.ROM
+rm ../bios/bk/BASIC10.ROM
+rm ../bios/bk/FOCAL10.ROM
+rm ../bios/bk/MONIT10.ROM
+rm ../bios/bk0010.zip
 echo
 echo "Sistema listo para su correcta instalacion"
 echo "System ready for right installation"
-
 echo "Obteniendo Bios---Getting Bios, be patient"
-
+echo
 echo "###### ATARI 800 ######"
 # https://docs.libretro.com/library/atari800/#bios
 echo
@@ -404,7 +486,6 @@ wget -c "${RUTA}tos106es.img" -P ../bios/
 wget -c "${RUTA}tos106fr.img" -P ../bios/
 wget -c "${RUTA}tos106uk.img" -P ../bios/
 wget -c "${RUTA}tos106us.img" -P ../bios/
-echo
 wget -c "${RUTA}tos162de.img" -P ../bios/
 wget -c "${RUTA}tos162fr.img" -P ../bios/
 wget -c "${RUTA}tos162uk.img" -P ../bios/
@@ -445,12 +526,6 @@ echo "###### Magnavox and Philips: Odyssey 2 ######"
 echo
 wget -c "${RUTA}o2rom.bin" -P ../bios/
 wget -c "${RUTA}c52.bin" -P ../bios/
-echo
-echo "###### Oric Atmos ######"
-# https://github.com/TomHarte/CLK
-echo
-wget -c "${RUTA}Oric/basic11.rom" -P ../bios/Oric/
-wget -c "${RUTA}Oric/colour.rom" -P ../bios/Oric/
 echo
 echo "###### Videopac+ G7400 ######"
 echo
@@ -509,6 +584,7 @@ echo
 wget -c "${RUTA}dc_boot.bin" -P ../bios/
 wget -c "${RUTA}dc_flash.bin" -P ../bios/
 wget -c "${RUTA}dc_boot.bin" -P ../bios/dc/
+
 echo
 echo "###### SEGA NAOMI ######"
 # https://github.com/libretro/libretro-super/blob/master/dist/info/flycast_libretro.info
@@ -551,18 +627,12 @@ echo "###### SONY PS2 ######"
 # https://pcsx2.net/config-guide/official-english-pcsx2-configuration-guide.html#Bios
 # use the last USA bios which can run NTSC and PAL games
 echo
-wget -c "${RUTA}ps2-0230a-20080220.bin" -P ../bios/ps2/
+wget -c "${RUTA}ps2/ps2-0230a-20080220.bin" -P ../bios/ps2/
 echo
-#echo "###### SONY PSVita ######"
-# https://wiki.batocera.org/systems:psvita
-#echo
-#wget -c "${RUTA_B}psvita/PSP2UPDAT.PUP" -P ../bios/psvita/
-#wget -c "${RUTA_B}psvita/PSVUPDAT.PUP" -P ../bios/psvita/
-#echo
 #echo "###### SONY PS3 ######"
 # https://www.playstation.com/en-us/support/system-updates/ps3/
 echo
-#wget -c "${RUTA_ARCH}PS3UPDAT.PUP" -P ../bios/
+#wget -c "${RUTA_B}PS3UPDAT.PUP" -P ../bios/
 echo
 echo "###### NINTENDO FAMILY DISK SYSTEM ######"
 # https://docs.libretro.com/library/fceumm/#bios
@@ -605,11 +675,6 @@ wget -c "${RUTA}sgb2_boot.bin" -P ../bios/
 wget -c "${RUTA}SGB1.sfc" -P ../bios/
 wget -c "${RUTA}SGB2.sfc" -P ../bios/
 echo
-echo
-echo "###### NINTENDO 64DD ######"
-echo
-wget -c "${RUTA}64DD_IPL.bin" -P ../bios/
-echo
 echo "###### Microsoft MSX ######"
 # https://docs.libretro.com/library/fmsx/#bios
 echo
@@ -626,11 +691,11 @@ wget -c "${RUTA}MSX2P.ROM" -P ../bios/
 wget -c "${RUTA}MSX2PEXT.ROM" -P ../bios/
 echo
 #echo "###### Microsoft XBOX ######"
-#echo
-#wget -c "${RUTA_ARCH}mcpx_1.0.bin" -P ../bios/
-#wget -c "${RUTA_ARCH}Complex_4627.bin" -P ../bios/
 echo
-echo "###### COMMODORE AMIGA 500 ######"
+#wget -c "${RUTA}mcpx_1.0.bin" -P ../bios/
+#wget -c "${RUTA}Complex_4627.bin" -P ../bios/
+echo
+echo "###### COMMODORE Amiga 500 ######"
 # https://github.com/libretro/libretro-super/blob/master/dist/info/puae_libretro.info
 # https://github.com/midwan/amiberry/wiki/Kickstart-ROMs-(BIOS)
 # https://fs-uae.net/docs/kickstarts
@@ -743,6 +808,7 @@ echo
 echo "###### GAMEPARK GP32 ######"
 echo
 wget -c "${RUTA}gp32.zip" -P ../bios/
+wget -c "${RUTA}gp32166m.bin" -P ../bios/
 echo
 echo "###### VTECH LASER 310 ######"
 echo
@@ -750,7 +816,7 @@ wget -c "${RUTA}laser310.zip" -P ../bios/
 echo
 #echo "###### FUTURE PINBALL ######"
 echo
-#wget -c "${RUTA_ARCH}wsh57/scripten.exe" -P ../bios/wsh57/
+#wget -c "${RUTA}wsh57/scripten.exe" -P ../bios/wsh57/
 echo
 echo "###### SUPER CASEETTE VISION ######"
 echo
@@ -803,6 +869,14 @@ wget -c "${RUTA}mac608.chd" -P ../bios/
 wget -c "${RUTA}mac701.chd" -P ../bios/
 wget -c "${RUTA}mac755.chd" -P ../bios/
 echo
+echo "###### Sega AI Computer ######"
+echo
+wget -c "${RUTA}segaai.zip" -P ../bios/
+echo
+echo "###### Sega Advanced Pico Beena ######"
+echo
+wget -c "${RUTA}beena.zip" -P ../bios/
+echo
 echo "###### TANDY COLOR COMPUTER ######"
 echo
 wget -c "${RUTA}coco.zip" -P ../bios/
@@ -811,6 +885,40 @@ wget -c "${RUTA}coco2b.zip" -P ../bios/
 wget -c "${RUTA}coco3.zip" -P ../bios/
 wget -c "${RUTA}coco3p.zip" -P ../bios/
 wget -c "${RUTA}coco_fdc_v11.zip" -P ../bios/
+wget -c "${RUTA}bas10.rom" -P ../bios/xroar/
+wget -c "${RUTA}bas12.rom" -P ../bios/xroar/
+wget -c "${RUTA}bas13.rom" -P ../bios/xroar/
+wget -c "${RUTA}extbas11.rom" -P ../bios/xroar/
+wget -c "${RUTA}coco3.rom" -P ../bios/xroar/
+wget -c "${RUTA}coco3p.rom" -P ../bios/xroar/
+wget -c "${RUTA}disk11.rom" -P ../bios/xroar/
+echo
+echo "###### Colour Genie ######"
+echo
+wget -c "${RUTA}cgenie.zip" -P ../bios/
+echo
+echo "###### Dragon 64 ######"
+echo
+wget -c "${RUTA}dragon64.zip" -P ../bios/
+wget -c "${RUTA}dragon32.zip" -P ../bios/
+wget -c "${RUTA}d32.rom" -P ../bios/xroar/
+wget -c "${RUTA}d64_1.rom" -P ../bios/xroar/
+wget -c "${RUTA}d64_2.rom" -P ../bios/xroar/
+wget -c "${RUTA}ddos10.rom" -P ../bios/xroar/
+echo
+echo "###### Tandy MC-10 ######"
+echo
+wget -c "${RUTA}mc10.zip" -P ../bios/
+wget -c "${RUTA}alice.zip" -P ../bios/
+wget -c "${RUTA}mc10.rom" -P ../bios/xroar/
+wget -c "${RUTA}alice.rom" -P ../bios/xroar/
+echo
+echo "###### TRS-80 ######"
+echo
+wget -c "${RUTA}trs80.zip" -P ../bios/
+wget -c "${RUTA}trs80m3.zip" -P ../bios/
+wget -c "${RUTA}trs80m4.zip" -P ../bios/
+wget -c "${RUTA}trs80m4p.zip" -P ../bios/
 echo
 echo "###### TOMY TUTOR ######"
 echo
@@ -837,6 +945,10 @@ wget -c "${RUTA}adam_fdc.zip" -P ../bios/
 wget -c "${RUTA}adam_kb.zip" -P ../bios/
 wget -c "${RUTA}adam_prn.zip" -P ../bios/
 echo
+echo "###### COLECOVISION ######"
+echo
+wget -c "${RUTA}colecovision.rom" -P ../bios/
+echo
 echo "###### BBC MICRO ######"
 echo
 wget -c "${RUTA}bbcb.zip" -P ../bios/
@@ -848,6 +960,14 @@ wget -c "${RUTA}bbcmc.zip" -P ../bios/
 wget -c "${RUTA}bbc_bitstik1.zip" -P ../bios/
 wget -c "${RUTA}bbc_bitstik2.zip" -P ../bios/
 wget -c "${RUTA}mame/samples/bbc.zip" -P ../bios/mame/samples/
+wget -c "${RUTA}Acorn/basic2.rom" -P ../bios/Acorn/
+wget -c "${RUTA}BBCMicro/os12.rom" -P ../bios/BBCMicro/
+wget -c "${RUTA}BBCMicro/dfs-2.26.rom" -P ../bios/BBCMicro/
+echo
+echo "###### AMSTRAD PCW ######"
+echo
+wget -c "${RUTA}pcw8256.zip" -P ../bios/
+wget -c "${RUTA}pcw9512.zip" -P ../bios/
 echo
 echo "###### APF M-1000 ######"
 echo
@@ -895,6 +1015,27 @@ wget -c "${RUTA}lynx48k.zip" -P ../bios/
 wget -c "${RUTA}lynx96k.zip" -P ../bios/
 wget -c "${RUTA}lynx128k.zip" -P ../bios/
 echo
+echo "###### Sharp MZ-80K ######"
+echo
+wget -c "${RUTA}mz80k.zip" -P ../bios/
+wget -c "${RUTA}mz80kj.zip" -P ../bios/
+echo
+echo "###### Sharp MZ-700 ######"
+echo
+wget -c "${RUTA}mz700.zip" -P ../bios/
+echo
+echo "###### Sharp MZ-800 ######"
+echo
+wget -c "${RUTA}mz800.zip" -P ../bios/
+echo
+echo "###### Sharp MZ-2000 ######"
+echo
+wget -c "${RUTA}mz2000.zip" -P ../bios/
+echo
+echo "###### Sharp MZ-2500 ######"
+echo
+wget -c "${RUTA}/mz2500.zip" -P ../bios/
+echo
 echo "###### VIDEO GAME MUSIC PLAYER ######"
 echo
 wget -c "${RUTA}qsound.zip" -P ../bios/
@@ -925,6 +1066,10 @@ echo "###### VTECH SOCRATES ######"
 echo
 wget -c "${RUTA}socrates.zip" -P ../bios/
 echo
+echo "###### Bandai RX-78 ######"
+echo
+wget -c "${RUTA}rx78.zip" -P ../bios/
+echo
 echo "###### ENTEX ADVENTURE VISION ######"
 echo
 wget -c "${RUTA}advision.zip" -P ../bios/
@@ -932,6 +1077,15 @@ echo
 echo "###### BITCORP GAMATE ######"
 echo
 wget -c "${RUTA}gamate.zip" -P ../bios/
+echo
+echo "###### Casio PV-2000 ######"
+echo
+wget -c "${RUTA}pv2000.zip" -P ../bios/
+echo
+echo "###### NEC PC-8001 ######"
+echo
+wget -c "${RUTA}pc8001.zip" -P ../bios/
+wget -c "${RUTA}pc8001mk2sr.zip" -P ../bios/
 echo
 echo "###### PHILLIPS CD-I ######"
 echo
@@ -941,17 +1095,18 @@ echo "###### SEGA NAOMI 2 ######"
 echo
 wget -c "${RUTA}dc/naomi2.zip" -P ../bios/dc/
 echo
-echo "###### HIKARU ######"
+echo "###### SEGA HIKARU ######"
 echo
 wget -c "${RUTA}hikaru.zip" -P ../bios/
 wget -c "${RUTA}mie.zip" -P ../bios/
+wget -c "${RUTA}jvs13551.zip" -P ../bios/
 echo
 #echo "###### PLAYSTATION VITA ######"
 # https://www.playstation.com/en-us/support/hardware/psvita/system-software/
 # http://dus01.psp2.update.playstation.net/update/psp2/image/2022_0209/sd_59dcf059d3328fb67be7e51f8aa33418/PSP2UPDAT.PUP?dest=us
-#echo
-#wget -c "${RUTA_CUA}PSP2UPDAT.PUP" -P ../bios/psvita/
-#wget -c "${RUTA_CUA}PSVUPDAT.PUP" -P ../bios/psvita/
+echo
+#wget -c "${RUTA_ARCH}psvita/PSP2UPDAT.PUP" -P ../bios/psvita/
+#wget -c "${RUTA_ARCH}psvita/PSVUPDAT.PUP" -P ../bios/psvita/
 echo
 echo "###### GCE VECTREX ######"
 echo
@@ -1003,10 +1158,15 @@ echo
 echo "###### SUPER A CAN ######"
 echo
 wget -c "${RUTA}supracan.zip" -P ../bios/
+wget -c "${RUTA}umc6650.zip" -P ../bios/
 echo
-echo "###### TANDY VIS: Video Information System MD-2500 ######"
+echo "###### TANDY Video Information System MD-2500 ######"
 echo
 wget -c "${RUTA}vis.zip" -P ../bios/
+echo
+echo "###### NINTENDO 64DD ######"
+echo
+wget -c "${RUTA}64DD_IPL.bin" -P ../bios/
 echo
 echo "###### NINTENDO GAMECUBE ######"
 echo
@@ -1015,17 +1175,67 @@ wget -c "${RUTA}GC/EUR/IPL.bin" -P ../bios/GC/EUR/
 wget -c "${RUTA}GC/JAP/IPL.bin" -P ../bios/GC/JAP/
 wget -c "${RUTA}GC/USA/IPL.bin" -P ../bios/GC/USA/
 echo
-#echo
+echo
 #wget -c "${RUTA}nb_48gc.zip" -P ../bios/
 #wget -c "${RUTA}votrax.zip" -P ../bios/
 # ---------- Sega Chihiro ---------- #
 #    "chihiro": { "name": "Sega Chihiro", "biosFiles": [{ "md5": "d49c52a4102f6df7bcf8d0617ac475ed", "file": "bios/mcpx_1.0.bin" },
 #                                                       { "md5": "f23d7e00ae8fbf88908ed1f9165f35eb", "file": "bios/cerbios.bin" }] },
 #echo "###### SEGA CHIHIRO XBOX ARCADE ######"
-#echo
+echo
+#wget -c "${RUTA}mcpx_1.0.bin" -P ../bios/
 #echo "mcpx_1.0.bin already downloaded"
 #wget -c "${RUTA}cerbios.bin" -P ../bios/
-#echo
+echo
+echo "###### Oric Atmos ######"
+# https://github.com/TomHarte/CLK
+echo
+wget -c "${RUTA}Oric/basic11.rom" -P ../bios/Oric/
+wget -c "${RUTA}Oric/colour.rom" -P ../bios/Oric/
+echo
+echo "###### Enterprise ######"
+echo
+wget -c "${RUTA}ep128emu/roms/exos21.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/basic21.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/exdos13.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/epfileio.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/exos20.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/basic20.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/exos24uk.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/hun.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/epd19hft.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/zt19hfnt.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/brd.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/zt19uk.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep64.zip" -P ../bios/
+wget -c "${RUTA}ep128.zip" -P ../bios/
+wget -c "${RUTA}ep64_exdos.zip" -P ../bios/
+echo
+echo "###### Videoton TVC ######"
+echo
+wget -c "${RUTA}ep128emu/roms/tvc22_sys.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/tvc22_ext.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/tvcfileio.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}ep128emu/roms/tvc_dos12d.rom" -P ../bios/ep128emu/roms/
+wget -c "${RUTA}tvc64.zip" -P ../bios/
+echo
+echo "###### Triforce ######"
+echo
+wget -c "${RUTA}saves/dolphin-emu/Triforce/segaboot.gcm" -P ../saves/dolphin-emu/Triforce/
+echo
+echo "###### Elektronika BK ######"
+# https://docs.libretro.com/library/bk/
+echo
+wget -c "${RUTA}bk/B11M_BOS.ROM" -P ../bios/bk/
+wget -c "${RUTA}bk/B11M_EXT.ROM" -P ../bios/bk/
+wget -c "${RUTA}bk/BAS11M_0.ROM" -P ../bios/bk/
+wget -c "${RUTA}bk/BAS11M_1.ROM" -P ../bios/bk/
+wget -c "${RUTA}bk/DISK_327.ROM" -P ../bios/bk/
+wget -c "${RUTA}bk/BASIC10.ROM" -P ../bios/bk/
+wget -c "${RUTA}bk/FOCAL10.ROM" -P ../bios/bk/
+wget -c "${RUTA}bk/MONIT10.ROM" -P ../bios/bk/
+wget -c "${RUTA}bk0010.zip" -P ../bios/
+echo
 sleep 1
 echo "Al fin, Copiadas todas las BIOS--Cool we finish"
 echo
